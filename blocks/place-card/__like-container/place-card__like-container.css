@@ -1,0 +1,5 @@
+.place-card__like-container {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}

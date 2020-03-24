@@ -1,0 +1,5 @@
+.popup__item {
+  border-radius: 5px;
+  max-width: 80vw;
+  max-height: 80vh;
+}
