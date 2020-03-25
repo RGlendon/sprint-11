@@ -1,4 +1,4 @@
-class CardList {
+export default class CardList {
   constructor(container, api, card, userInfo) {
     this.container = container;
     this.api = api;
@@ -41,14 +41,14 @@ class CardList {
       let card = event.target.closest('.place-card');
       // console.log(card);
       if (!event.target.matches('.place-card__like-icon_liked')) {
-        api.likeCard(idCard)
+        this.api.likeCard(idCard)
           .then(result => {
             // console.log(result);
             this.card.like(event);
             this.card.updateLikesCount(card, result.likes.length);
           });
       } else {
-        api.dislikeCard(idCard)
+        this.api.dislikeCard(idCard)
           .then(result => {
             // console.log(result);
             this.card.like(event);
@@ -61,7 +61,7 @@ class CardList {
       if (confirm('Вы действительно хотите удалить эту карточку?')) {
         let idCard = event.target.parentElement.parentElement.dataset.id;
         // console.log(idCard);
-        api.deleteCard(idCard)
+        this.api.deleteCard(idCard)
           .then(() => {
             this.card.remove(event);
           });

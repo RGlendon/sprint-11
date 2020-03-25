@@ -1,4 +1,4 @@
-class Popup {
+export class Popup {
   constructor(popup) {
     this.popup = popup;
     //пришлось создать переменную, т.к. у кнопок разные названия: Сохранить и +. Используется в renderLoading
@@ -50,7 +50,7 @@ class Popup {
 * Класс Popup должен лежать в файле с названием Popup.
 * Когда файлом сотни и тысячи в проекте, проще разобраться где и какой класс лежит
 */
-class PopupImage extends Popup {
+export class PopupImage extends Popup {
   constructor(popup) {
     super(popup)
     this.image = popup.querySelector('.popup__item');
@@ -70,7 +70,7 @@ class PopupImage extends Popup {
 * Класс Popup должен лежать в файле с названием Popup.
 * Когда файлом сотни и тысячи в проекте, проще разобраться где и какой класс лежит
 */
-class PopupEdit extends Popup {
+export class PopupEdit extends Popup {
   constructor(popup) {
     super(popup);
     // this.formEdit = formEdit;

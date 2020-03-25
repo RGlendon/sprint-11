@@ -1,4 +1,4 @@
-class UserInfo {
+export default class UserInfo {
   constructor(container, api) {
     this.container = container;
     this.api = api;

@@ -6,7 +6,7 @@ const errorMessage = {
 };
 
 
-class FormValidation {
+export default class FormValidation {
   constructor(form) {
     this.form = form;
     this.button = form.querySelector('button');

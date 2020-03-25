@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   // constructor(name, link) {
   //   this.card = this.create(name, link);
   //   this.card.querySelector('.place-card__like-icon').addEventListener('click', this.like);
