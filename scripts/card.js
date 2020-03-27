@@ -1,9 +1,4 @@
 export default class Card {
-  // constructor(name, link) {
-  //   this.card = this.create(name, link);
-  //   this.card.querySelector('.place-card__like-icon').addEventListener('click', this.like);
-  //   this.card.querySelector('.place-card__delete-icon').addEventListener('click', this.remove);
-  // }
 
   like(event) {
     event.target.classList.toggle('place-card__like-icon_liked');
@@ -35,7 +30,6 @@ export default class Card {
         "/": '&#x2F;',
       };
       const reg = /[&<>"'/]/ig;
-      // console.log(string.replace(reg, (match) => (map[match])));
       return string.replace(reg, (match) => (map[match]));
     }
 

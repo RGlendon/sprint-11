@@ -17,8 +17,11 @@ const form = document.forms.new;
 const formEdit = document.forms.edit;
 const formAvatar = document.forms.avatar;
 
+let protocol;
+protocol = (process.env.NODE_ENV === 'production') ? 'https' : 'http';
+
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort8',
+  baseUrl: `${protocol}://praktikum.tk/cohort8`,
   headers: {
     authorization: '1c79499c-fe85-411d-bd1a-591ef36b3252',
     'Content-Type': 'application/json'
@@ -34,15 +37,10 @@ Promise.all([
   api.getUserInfo()
 ])
   .then(([initialCards, user]) => {
-    // console.log(initialCards);
-    // console.log(user);
     userInfo.setUserInfo(user);
     userInfo.displayUserInfo();
     cardList.render(initialCards);
   });
-
-
-process.env.NODE_ENV === 'production' ? console.log('welcome to production') : console.log('welcome to development');
 
 
 const popup = new Popup(document.querySelector('.popup_add'));
